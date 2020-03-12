@@ -1,0 +1,29 @@
+.weather-item{
+    display: flex;
+    width: 300px;
+    background-color: #f79466b6;
+    border-left: 3px solid #479911;
+    border-right: 3px solid #479911;
+    border-bottom: 3px solid #e91f1f;
+
+    &__main{
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        padding-left: 5px;
+    }
+
+    &__additional{
+        padding-top: 10px;
+        width: 1fr;
+    }
+
+
+
+
+
+    &__inner-padding{
+        padding-top: 4px;
+    }
+}
+
