@@ -1,12 +1,8 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { Navigation } from './components/Navigation/Navigation'
 import { CityDefinition } from './components/CityDefinition/CityDefinition'
 
-import { CityContext } from './context/city/cityContext'
-import { Preloader } from './components/Preloader/Preloader'
-import { usePosition } from './reqests/geolocation/usePosition'
-import { cityGeolocation } from './reqests/geolocation/cityGeolocation'
-import cityList from './reqests/city.list.json'
+
 
 function App({ children }) {
 
@@ -24,34 +20,31 @@ function App({ children }) {
   const timesOfDay = hourDefinition()
 
   const [modal, setModal] = useState(false)
-  const { city, selectCity } = useContext(CityContext)
-  const [load, setLoad] = useState(true)
-  const { latitude, longitude, error } = usePosition()
+  
 
-  useEffect(()=>{
-    async function dataCity(){
-      const result = cityGeolocation(latitude, longitude, error, cityList)
-      await selectCity(result)
-      setLoad(false)
-    }
+  // const dataCity = async () =>{
+  //   const result = cityGeolocation(latitude, longitude, error, cityList)
+  //   await selectCity(result)
+  //   console.log(result)
+  //   }
 
-    dataCity()
-    // const result = cityGeolocation(latitude, longitude, error, cityList)
-    // selectCity(result)
-    // setLoad(false)
-  }, [city, latitude, longitude, error, selectCity])
+  // useEffect(()=>{
+  //   if (city){
+        
+  //     dataCity()
+  //   }
+  //   setLoad(false)
+  // }, [city])
 
-  const x = Math.floor(latitude)
   return (
     <>
-      {load ? <div className='container-preload'> <Preloader /></div>:
-      <><CityDefinition modal={modal} setModal={setModal} />
+      {/* {load ? <div className='container-preload'> <Preloader /></div>: */}
+      <CityDefinition modal={modal} setModal={setModal} />
       <Navigation setModal={setModal} />
       <div className={`content-container content-container_${timesOfDay}`}>
         {children}
-      </div></>
-      }
-      {x}
+      </div>
+      {/* } */}
     </>
   )
 }

@@ -11,7 +11,9 @@ export const Navigation = ({setModal}) => {
                 <NavLink to='/city-info'>City Information</NavLink>
             </div>
             <div>
-                <p className='navigation__city' onClick={() => setModal(true)}>{`Select city: ${city}`}</p>
+                <p className='navigation__city' onClick={() => setModal(true)}>
+                    {city ? `Select city: ${city}` : 'Click to select a city'}
+                </p>
             </div>
         </nav>
     )

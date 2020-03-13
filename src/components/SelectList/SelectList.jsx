@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import 'antd/dist/antd.css'
 import { Select } from 'antd'
 import { Button } from 'antd'
 
 const { Option } = Select
 
-export const SelectList = ({ list, placeholder, actSelect, setModal }) =>{
-    const [sel, setSel] = useState()
+export const SelectList = ({ sel, setSel, list, placeholder, actSelect, setModal }) =>{
+    // const [sel, setSel] = useState()
     const apply = () =>{
         actSelect(sel)
         setModal(false)
@@ -16,6 +16,7 @@ export const SelectList = ({ list, placeholder, actSelect, setModal }) =>{
     return(
         <>
             <Select
+                value={sel}
                 showSearch
                 placeholder={placeholder}
                 optionFilterProp='children'

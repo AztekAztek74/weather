@@ -15,8 +15,10 @@ export const Home = () =>{
 
     
     useEffect(()=>{
-
-        weatherReqest(city, setData)
+        if (city){
+            weatherReqest(city, setData)
+        }
+        
         setLoad(false)
     }, [city])
 
