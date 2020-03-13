@@ -39,10 +39,17 @@ export const CityDefinition = ({modal, setModal}) =>{
                             <div className='modalOverlay'>
                                 <div className='modalOverlay__window'>
                                     {city ? 
-                                    <p className='modalOverlay__header'>Weather is presented on the city of  
-                                    <span className='modalOverlay__activeCity'>{city}</span>
-                                    </p>:
-                                    <p className='modalOverlay__header'>To define a voice,  
+                                    <div>
+                                        <p className='modalOverlay__header'>Weather is presented on the city of  
+                                        <span className='modalOverlay__activeCity'>{` ${city}`}</span>
+                                        </p>
+                                        <p className='modalOverlay__header'>  
+                                        <span onClick={dataCity} className='modalOverlay__activeCity'>Click</span>
+                                        to automatically override your city
+                                        </p>
+                                    </div>
+                                    :
+                                    <p className='modalOverlay__header'>To define a city,  
                                     <span onClick={dataCity} className='modalOverlay__activeCity'>press</span>
                                     , or select a city manually
                                     </p>
