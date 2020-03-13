@@ -6,7 +6,6 @@ import { Button } from 'antd'
 const { Option } = Select
 
 export const SelectList = ({ sel, setSel, list, placeholder, actSelect, setModal }) =>{
-    // const [sel, setSel] = useState()
     const apply = () =>{
         actSelect(sel)
         setModal(false)

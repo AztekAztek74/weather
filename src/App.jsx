@@ -16,35 +16,17 @@ function App({ children }) {
     return color
   }
 
-
   const timesOfDay = hourDefinition()
 
   const [modal, setModal] = useState(false)
-  
-
-  // const dataCity = async () =>{
-  //   const result = cityGeolocation(latitude, longitude, error, cityList)
-  //   await selectCity(result)
-  //   console.log(result)
-  //   }
-
-  // useEffect(()=>{
-  //   if (city){
-        
-  //     dataCity()
-  //   }
-  //   setLoad(false)
-  // }, [city])
 
   return (
     <>
-      {/* {load ? <div className='container-preload'> <Preloader /></div>: */}
       <CityDefinition modal={modal} setModal={setModal} />
       <Navigation setModal={setModal} />
       <div className={`content-container content-container_${timesOfDay}`}>
         {children}
       </div>
-      {/* } */}
     </>
   )
 }
