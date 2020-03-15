@@ -4,7 +4,7 @@ import { CityContext } from './cityContext'
 import { SELECT_CITY } from '../type'
 
 export const CityState = ({children}) =>{
-    const [state, dispatch] = useReducer(cityReducer, localStorage.getItem('city') || undefined)
+    const [state, dispatch] = useReducer(cityReducer, localStorage.getItem('city') || '')
 
     const selectCity = (city) =>{
         dispatch({

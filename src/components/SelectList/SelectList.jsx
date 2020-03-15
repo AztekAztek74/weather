@@ -2,6 +2,7 @@ import React from 'react'
 import 'antd/dist/antd.css'
 import { Select } from 'antd'
 import { Button } from 'antd'
+import './SelectList.scss'
 
 const { Option } = Select
 
@@ -28,8 +29,10 @@ export const SelectList = ({ sel, setSel, list, placeholder, actSelect, setModal
                     <Option onClick={() => setSel(inner.name)} key={inner.id} value={inner.name}>{inner.name}</Option>
                 ))}
             </Select>
-            <Button onClick={apply} type='primary'>To apply</Button>
-            <Button onClick={() => setModal(false)}>Cancel</Button>
+            <div className='select__button-group'>
+                <Button className='select__button' onClick={apply} type='primary'>To apply</Button>
+                <Button className='select__button' onClick={() => setModal(false)}>Cancel</Button>
+            </div>
         </>
     )
 }

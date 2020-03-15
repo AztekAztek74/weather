@@ -24,13 +24,21 @@ export const Home = () =>{
 
     return(
         <>
-        {load ? <div className='container-preload'> <Preloader /></div>
-        :
-        <div className='weather-list'>
-            
-            {data && <WeatherItem data={data} />}
-        </div>
-        }
+            {load ? <div className='container-preload'> <Preloader /></div>
+            :
+                city ? 
+                <div className='weather-list'>
+                    {data && <WeatherItem data={data} />}
+                </div>
+                :
+                <div className='weather-list'>
+                    <div className='notSelected__block'>
+                        <div className='notSelected__container'>
+                            <h1 className='notSelected__text'>No city selected</h1>
+                        </div>
+                    </div>
+                </div>
+            }
         </>
     )
 }   

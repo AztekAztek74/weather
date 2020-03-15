@@ -20,3 +20,12 @@
     justify-content: space-between;
     padding: 36px 40px;
 }
+
+.modalOverlay__header{
+    font-family: 'Poppins', sans-serif;
+}
+
+.modalOverlay__activeCity{
+    background-color: #ff8e0c;
+    cursor: pointer;
+}

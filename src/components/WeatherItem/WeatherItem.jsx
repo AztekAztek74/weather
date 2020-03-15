@@ -13,7 +13,7 @@ export const WeatherItem = ({data}) =>{
                     </div>
                     <div className='weather-item__additional'>
                         <p className='weather-item__description'>{inner.weather[0].description}</p>
-                        <p className='weather-item__temp weather-item__inner-padding'>Temperature: {inner.main.temp}</p>
+                        <p className='weather-item__temp weather-item__inner-padding'>Temperature: {Math.round(inner.main.temp)}°C</p>
                         <p className='weather-item__data-day weather-item__inner-padding'>Date: {inner.dt_txt.split(' ')[0].split('-')[2]}.{inner.dt_txt.split(' ')[0].split('-')[1]}</p>
                         <p className='weather-item__hour weather-item__inner-padding'>Time: {inner.dt_txt.split(' ')[1].split(':')[0]}:00</p>
                     </div>

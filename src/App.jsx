@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Navigation } from './components/Navigation/Navigation'
 import { CityDefinition } from './components/CityDefinition/CityDefinition'
+import './App.scss'
 
 
 

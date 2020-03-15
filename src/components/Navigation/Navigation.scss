@@ -1,0 +1,37 @@
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    margin: 0 10px;
+    background-image: url('https://st2.depositphotos.com/3894705/6723/i/950/depositphotos_67232377-stock-photo-white-background-with-blue-stripes.jpg');
+
+    &__city{
+        font-family: 'Baloo Thambi 2', cursive;
+        margin: 0;
+    }
+
+    &__section{
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+    }
+
+    & a{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        color: #000000;
+        border-bottom: 2px solid transparent;
+    }
+
+    & a:hover,
+    & a.active{
+        border-color: #ff8e0c;
+        color: #000000;
+    }
+
+    & a.active{
+        border-color: #ff8e0c;
+    }
+}
