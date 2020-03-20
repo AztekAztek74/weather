@@ -6,6 +6,10 @@
     margin: 0 10px;
     background-image: url('https://st2.depositphotos.com/3894705/6723/i/950/depositphotos_67232377-stock-photo-white-background-with-blue-stripes.jpg');
 
+    &__select-city{
+        cursor: pointer;
+    }
+
     &__city{
         font-family: 'Baloo Thambi 2', cursive;
         margin: 0;

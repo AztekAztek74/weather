@@ -7,7 +7,7 @@ export const Navigation = ({setModal}) => {
     const { city } = useContext(CityContext)
     return(
         <nav className='navigation'>
-            <div>
+            <div className='navigation__select-city'>
                 <p className='navigation__city' onClick={() => setModal(true)}>
                     {city ? `Select city: ${city}` : 'Click to select a city'}
                 </p>

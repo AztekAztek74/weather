@@ -3,6 +3,7 @@ import { weatherReqest } from '../../reqests/weatherReqest/weatherReqest'
 import { WeatherItem } from '../../components/WeatherItem/WeatherItem'
 import { CityContext } from '../../context/city/cityContext'
 import { Preloader } from '../../components/Preloader/Preloader'
+import { NoCity } from '../../components/NoCity/Nocity'
 import './Home.scss'
 
 
@@ -27,17 +28,13 @@ export const Home = () =>{
             {load ? <div className='container-preload'> <Preloader /></div>
             :
                 city ? 
-                <div className='weather-list'>
+                <section className='container-center'>
                     {data && <WeatherItem data={data} />}
-                </div>
+                </section>
                 :
-                <div className='weather-list'>
-                    <div className='notSelected__block'>
-                        <div className='notSelected__container'>
-                            <h1 className='notSelected__text'>No city selected</h1>
-                        </div>
-                    </div>
-                </div>
+                <section className='container-center'>
+                    <NoCity />
+                </section>
             }
         </>
     )

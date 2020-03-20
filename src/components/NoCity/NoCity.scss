@@ -1,0 +1,19 @@
+.notSelected__block{
+    position: relative;
+    top: 300px;
+    display: flex;
+    height: 100%;
+}
+
+.notSelected__container{
+    display: flex;
+    background-color: #b60b0b;
+}
+
+.notSelected__text{
+    padding: 15px;
+    margin: 0;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #000000
+}
