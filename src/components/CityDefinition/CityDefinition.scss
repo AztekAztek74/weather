@@ -1,3 +1,5 @@
+@import '../../scss-components/const.scss';
+
 .modalOverlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -5,27 +7,33 @@
     bottom: 0;
     left: 0;
     right: 0;
+
+    &__window {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #FFF;
+        height: 300px;
+        width: 510px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 36px 40px;
+        @media (max-width: 320px){
+            &{
+                width: 310px;
+            }
+        }
+    }
+    
+    &__header{
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    &__activeCity{
+        background-color: $COLOR__SELECT-TEXT;
+        cursor: pointer;
+    }
 }
 
-.modalOverlay__window {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #FFF;
-    height: 300px;
-    width: 510px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 36px 40px;
-}
-
-.modalOverlay__header{
-    font-family: 'Poppins', sans-serif;
-}
-
-.modalOverlay__activeCity{
-    background-color: #ff8e0c;
-    cursor: pointer;
-}

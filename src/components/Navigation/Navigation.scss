@@ -1,16 +1,31 @@
+@import '../../scss-components/const.scss';
+
 .navigation{
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: 7vh;
     align-items: center;
     margin: 0 10px;
     background-image: url('https://st2.depositphotos.com/3894705/6723/i/950/depositphotos_67232377-stock-photo-white-background-with-blue-stripes.jpg');
 
+    @media (max-width: 320px){
+        &{
+            margin: 0 3px;
+            height: 10vh;
+        }
+    }
     &__select-city{
+        display: flex;
         cursor: pointer;
+        @media (max-width: 320px){
+            &{
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+        }
     }
 
-    &__city{
+    &__city-text{
         font-family: 'Baloo Thambi 2', cursive;
         margin: 0;
     }
@@ -19,23 +34,29 @@
         display: flex;
         width: 30%;
         justify-content: space-between;
+        @media (max-width: 320px){
+            &{
+                flex-direction: column;
+                width: 50%;
+                align-items: center;
+            }
+        }
     }
 
     & a{
         display: flex;
         align-items: center;
-        height: 100%;
         color: #000000;
         border-bottom: 2px solid transparent;
     }
 
     & a:hover,
     & a.active{
-        border-color: #ff8e0c;
+        border-color: $COLOR__SELECT-TEXT;
         color: #000000;
     }
 
     & a.active{
-        border-color: #ff8e0c;
+        border-color: $COLOR__SELECT-TEXT;
     }
 }

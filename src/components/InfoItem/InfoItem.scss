@@ -1,5 +1,14 @@
+@import '../../scss-components/const.scss';
+
 .info-block__info-section{
-    background-color: #f7b053;
+    background-color: $COLOR__SELECT-TEXT;
     width: 60%;
     margin-left: 10px;
+
+    @media (max-width: 768px){
+        &{
+            width: 95%;
+            margin-left: 0;
+        }
+    }
 }

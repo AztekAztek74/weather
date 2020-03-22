@@ -20,7 +20,6 @@ export const CityDefinition = ({modal, setModal}) =>{
     const dataCity = () =>{
         const result = cityGeolocation(latitude, longitude, error, cityList)
         setSel(result)
-        console.log(result)
     }
     
     return (
