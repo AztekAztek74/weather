@@ -1,3 +1,8 @@
+Get the key from https://openweathermap.org/api and paste it into the KEY const in src/reqests/weatherReqest/weatherReqest.js
+
+Get the key from https://console.developers.google.com/cloud-resource-manager and paste it into the const KEY in src/reqests/imageReqest/imageReqest.js
+and get the key from https://cse.google.ru/cse/all and paste it into the const CX in src/reqests/imageReqest/imageReqest.js
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
