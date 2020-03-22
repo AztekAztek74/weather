@@ -3,7 +3,7 @@ import axios from 'axios'
 const BASE_PATH = 'https://api.openweathermap.org/data/2.5/'
 const CITY_PATH = 'forecast?q='
 const KEY_PATH = '&appid='
-const KEY = '79a0c4fb79ec5d4bd9703776da9ba236'
+const KEY = 'NEED_KEY'
 const UNITS = '&units=metric'
 
 export const weatherReqest = async (city, setData) => {
