@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const BASE_PATH = 'https://www.googleapis.com/customsearch/v1?'
-const KEY = 'NEED_KEY'
-const CX = 'NEED_CX'
+const KEY = 'AIzaSyBlO8ZzURu5YqIP-DxfH10oqE_W_TtoX-8&cx=001909621778680338983%3Aqoni1zwjite'
+const CX = '001909621778680338983%3Aqoni1zwjite'
 const NUM_IMG = '3'
 const OTHER_SETTINGS = 'searchType=image&fileType=jpg&imgSize=xlarge&alt=json'
 
