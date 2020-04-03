@@ -11,7 +11,7 @@ export const Navigation = ({setModal}) => {
                 {city ? <><p className='navigation__city-text'>Select city: </p> <p className='navigation__city-text'>{city}</p> </> : <p className='navigation__city-text'>Click to select a city</p>}
             </div>
             <div className='navigation__section'>
-                <NavLink exact to='/'>Weather</NavLink>
+                <NavLink exact to='/weather'>Weather</NavLink>
                 <NavLink to='/city-info'>City Information</NavLink>
             </div>
         </nav>
