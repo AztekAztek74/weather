@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import { NavLink } from 'react-router-dom'
 import { CityContext } from '../../context/city/cityContext'
 import './Navigation.scss'
+import PropTypes from 'prop-types'
 
 export const Navigation = ({setModal}) => {
     const { city } = useContext(CityContext)
@@ -16,4 +17,12 @@ export const Navigation = ({setModal}) => {
             </div>
         </nav>
     )
+}
+
+Navigation.propTypes = {
+    setModal: PropTypes.func
+}
+
+Navigation.defaultProps = {
+    setModal: () => {}
 }

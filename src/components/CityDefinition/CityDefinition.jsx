@@ -3,11 +3,10 @@ import { Portal } from '../Portal/Portal'
 import { CityContext } from '../../context/city/cityContext'
 import './CityDefinition.scss'
 import { SelectList } from '../SelectList/SelectList'
-
 import cityList from '../../reqests/city.list.json'
-
 import { usePosition } from '../../reqests/geolocation/usePosition'
 import { cityGeolocation } from '../../reqests/geolocation/cityGeolocation'
+import PropTypes from 'prop-types'
 
 
 export const CityDefinition = ({modal, setModal}) =>{
@@ -52,4 +51,14 @@ export const CityDefinition = ({modal, setModal}) =>{
             }
         </> 
     )
+}
+
+CityDefinition.propTypes = {
+    modal: PropTypes.bool,
+    setModal: PropTypes.func
+}
+
+CityDefinition.defaultProps = {
+    modal: false,
+    setModal: () =>{}
 }

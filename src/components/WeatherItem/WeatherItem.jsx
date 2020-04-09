@@ -25,7 +25,7 @@ export const WeatherItem = ({data}) =>{
 }
 
 WeatherItem.propTypes = {
-    data: PropTypes.array.isRequired
+    data: PropTypes.arrayOf(PropTypes.object)
 }
 
 WeatherItem.defaultProps = {

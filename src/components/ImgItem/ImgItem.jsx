@@ -1,5 +1,6 @@
 import React from 'react'
 import './ImgItem.scss'
+import PropTypes from 'prop-types'
 
 export const ImgItem = ({ dataImg, city }) =>{
     return(
@@ -11,4 +12,14 @@ export const ImgItem = ({ dataImg, city }) =>{
             ))}
         </aside>
     )
+}
+
+ImgItem.propTypes = {
+    dataImg: PropTypes.arrayOf(PropTypes.string),
+    city: PropTypes.string
+}
+
+ImgItem.defaultProps = {
+    dataImg: [],
+    city: null
 }

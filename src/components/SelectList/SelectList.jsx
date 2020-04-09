@@ -3,6 +3,7 @@ import 'antd/dist/antd.css'
 import { Select } from 'antd'
 import { Button } from 'antd'
 import './SelectList.scss'
+import PropTypes from 'prop-types'
 
 const { Option } = Select
 
@@ -35,4 +36,22 @@ export const SelectList = ({ sel, setSel, list, placeholder, actSelect, setModal
             </div>
         </>
     )
+}
+
+SelectList.propTypes = {
+    sel: PropTypes.string,
+    setSel: PropTypes.func,
+    list: PropTypes.arrayOf(PropTypes.object),
+    placeholder: PropTypes.string,
+    actSelect: PropTypes.func,
+    setModal: PropTypes.func
+}
+
+SelectList.defaultProps = {
+    sel: '',
+    setSel: () => {},
+    list: [],
+    placeholder: '',
+    actSelect: () => {},
+    setModal: () => {}
 }
